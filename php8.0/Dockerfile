@@ -1,5 +1,5 @@
 # Use an official PHP runtime as a parent image
-FROM localhost/php:8.0-fpm-alpine
+FROM php:8.0-fpm-alpine
 
 # Set working directory
 WORKDIR /var/www/html

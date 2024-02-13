@@ -17,7 +17,7 @@ services:
   phpmyadmin:
     image: docker.io/library/phpmyadmin:latest
     environment:
-      PMA_HOST: 10.89.0.2
+      PMA_HOST: mariadb 
       PMA_PORT: 3306
     depends_on:
       - mariadb

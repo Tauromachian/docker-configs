@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres
+    container_name: my-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: 123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "3306:3306"
+
+  pgadmin:
+    image: pgadmin
+    container_name: my-pgadmin
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: 123
+      PGADMIN_LISTEN_PORT: 8080
+    volumes:
+      - pgadmin_data:/pgadmin4/servers.json
+
+volumes:
+  postgres_data:
+  pgadmin_data:

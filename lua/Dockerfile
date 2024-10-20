@@ -17,3 +17,5 @@ RUN luarocks-5.3 install luasocket
 RUN luarocks-5.3 install luasql-postgres PGSQL_INCDIR=/usr/include/postgresql
 
 WORKDIR /app
+
+CMD ["lua5.3"]

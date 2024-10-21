@@ -15,6 +15,7 @@ RUN apk add --no-cache \
 # Lua dependencies
 RUN luarocks-5.3 install luasocket
 RUN luarocks-5.3 install luasql-postgres PGSQL_INCDIR=/usr/include/postgresql
+RUN luarocks-5.3 install json.lua
 
 WORKDIR /app
 

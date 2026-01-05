@@ -20,6 +20,7 @@ services:
       - "8078:80"
     environment:
       PMA_HOST: db
+      UPLOAD_LIMIT: ${UPLOAD_LIMIT}
 
 volumes:
   mysql_data:
